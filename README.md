@@ -1,0 +1,1 @@
+## [Dnsmasq container scratch build from source](https://thekelleys.org.uk/gitweb/?p=dnsmasq.git;a=summary)

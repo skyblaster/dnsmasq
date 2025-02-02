@@ -49,5 +49,8 @@ COPY --from=builder /var/lib/misc /var/lib/misc
 # Explicitly set the user to nobody
 USER nobody
 
+# Expose DNS, DHCP, TFTP, and Proxy DHCP ports
+EXPOSE 53/udp 53/tcp 67/udp 69/udp 4011/udp
+
 # Set the entrypoint to run dnsmasq
 ENTRYPOINT ["dnsmasq"]
