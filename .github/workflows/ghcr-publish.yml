@@ -30,7 +30,7 @@ jobs:
       - name: Extract version from Dockerfile
         id: extract_version
         run: |
-          VERSION=$(awk -F'=' '/ARG DNSMASQ_VERSION/ {gsub(/"/, "", $2); print $2}' Dockerfile)
+          VERSION=$(grep 'ARG DNSMASQ_VERSION=' Dockerfile | cut -d '=' -f 2 | tr -d '"' | sed 's/^v//')
           echo "version=$VERSION" >> $GITHUB_OUTPUT
 
       - name: Docker meta
