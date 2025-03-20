@@ -2,7 +2,7 @@
 FROM alpine:latest AS builder
 
 # Define the version as a build argument
-ARG DNSMASQ_VERSION=v2.91rc6
+ARG DNSMASQ_VERSION=v2.91
 
 # Install build dependencies
 RUN apk add --no-cache \
