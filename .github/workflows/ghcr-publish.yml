@@ -20,7 +20,7 @@ jobs:
     outputs:
       version: ${{ steps.extract_version.outputs.version }}
     steps:
-      - uses: actions/checkout@v4  # Add this to checkout the repository
+      - uses: actions/checkout@v6  # Add this to checkout the repository
 
       - name: Prepare
         run: |
